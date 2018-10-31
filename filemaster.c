@@ -120,7 +120,7 @@ int main(){
   char * secondperm =  permissions((mode / 8)%8);
 
   char * thirdperm = permissions(mode%8);
-
+  printf("PRINTING FILE STATS FOR: a.out\n");
   printf("-%s%s%s l ", firstperm, secondperm, thirdperm );
   printf("%s ", sizestr);
   printf("%s %s %d %s:%s:%s %d a.out\n", dayofweek, month, dayofmonth, hourstr, minstr, secstr, year);

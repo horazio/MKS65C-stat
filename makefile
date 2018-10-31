@@ -1,5 +1,5 @@
-all : readme.c
-	gcc readme.c
+all : filemaster.c
+	gcc filemaster.c
 
 run :
 	./a.out
