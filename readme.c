@@ -13,7 +13,7 @@ int main(){
     printf("\nfailure\n");
   }
   int size = s -> st_size;
-  double time = s -> st_atime;
+  int time = s -> st_atime;
   int mode = s -> st_mode;
 
   int base_time = 1540872000;
@@ -22,6 +22,12 @@ int main(){
   int day = (time - base_time) / (3600 * 24);
   char * week[7] = {"Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed"};
   char * dayweek = "Wed";
+
+  
+  int hours = (((time - base_time) / 3600) % 12) + 1;
+  //int minutes = (((time - base_time) / 60) % (60) ;
+  //int seconds;
+  
   if(day < 2){
     day = 31;
     month = "Oct";
@@ -31,6 +37,6 @@ int main(){
     day++;
   }
   
-  printf("%s %s %d\n\n", dayweek, month, day);
+  printf("%s %s %d %d\n\n", dayweek, month, day, hours);
   return 0;
 }
